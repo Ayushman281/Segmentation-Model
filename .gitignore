@@ -1,0 +1,12 @@
+__pycache__/
+.Python
+venv/
+*.pt
+*.pth
+*.h5
+*.hdf5
+.env
+node_modules/
+.vscode/
+output/
+uploads/
