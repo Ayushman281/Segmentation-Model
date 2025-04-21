@@ -74,6 +74,8 @@ async def segment_image(file: UploadFile = File(...)):
         save_output_image(colored_mask, output_path)
         
         # Return response with link to the result
+        # In segmentation.py
+        # In app/routers/segmentation.py
         return {
             "job_id": job_id,
             "original_filename": file.filename,

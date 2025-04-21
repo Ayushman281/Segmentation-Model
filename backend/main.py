@@ -33,9 +33,8 @@ app.add_middleware(
 # Include routers
 app.include_router(segmentation.router)
 
-# Mount static files for serving uploaded and output images
-app.mount("/uploads", StaticFiles(directory=upload_dir), name="uploads")
-app.mount("/output", StaticFiles(directory=output_dir), name="output")
+app.mount("/api/uploads", StaticFiles(directory=upload_dir), name="uploads")
+app.mount("/api/output", StaticFiles(directory=output_dir), name="output")
 
 @app.get("/")
 def read_root():

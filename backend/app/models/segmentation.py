@@ -19,7 +19,7 @@ def jaccard_coef(y_true, y_pred):
 
 class SegmentationModel:
     def __init__(self):
-        self.model_path = os.getenv("MODEL_PATH", "app/models/weights/combined_model_best.h5")
+        self.model_path = os.getenv("MODEL_PATH", "app/models/weights/satellite_segmentation_full.h5")
         self.model = self._load_model()
         self.classes = ["background", "building", "road", "water"]
         self.num_classes = len(self.classes)
