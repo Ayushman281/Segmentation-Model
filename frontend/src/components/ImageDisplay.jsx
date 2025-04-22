@@ -104,34 +104,6 @@ function ImageDisplay({ result }) {
           View Full Size
         </Button>
       </Box>
-
-      <Box sx={{ mt: 3 }}>
-        <Typography variant="body2" sx={{ fontWeight: "bold" }}>
-          Legend:
-        </Typography>
-        <Box sx={{ display: "flex", flexWrap: "wrap", gap: 1, mt: 1 }}>
-          <Chip
-            label="Buildings"
-            sx={{ bgcolor: "#ff0000", color: "white" }}
-            size="small"
-          />
-          <Chip
-            label="Roads"
-            sx={{ bgcolor: "#00ff00", color: "black" }}
-            size="small"
-          />
-          <Chip
-            label="Water"
-            sx={{ bgcolor: "#0000ff", color: "white" }}
-            size="small"
-          />
-          <Chip
-            label="Background"
-            sx={{ bgcolor: "#000000", color: "white" }}
-            size="small"
-          />
-        </Box>
-      </Box>
     </Paper>
   );
 }

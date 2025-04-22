@@ -32,15 +32,6 @@ def validate_image(file_path):
         return False
 
 def read_image_file(file_path):
-    """
-    Read an image file into a numpy array
-    
-    Args:
-        file_path: Path to the image file
-        
-    Returns:
-        A numpy array representing the image
-    """
     try:
         # Check extension to determine how to load
         _, ext = os.path.splitext(file_path)
@@ -67,13 +58,6 @@ def read_image_file(file_path):
         return None
 
 def save_output_image(image, file_path):
-    """
-    Save a processed image to disk
-    
-    Args:
-        image: A numpy array representing the image
-        file_path: Path where to save the image
-    """
     try:
         # Convert from RGB to BGR for OpenCV
         if len(image.shape) == 3 and image.shape[2] == 3:
@@ -85,17 +69,6 @@ def save_output_image(image, file_path):
         raise Exception(f"Error saving output image: {str(e)}")
 
 def create_overlay(original, mask, alpha=0.5):
-    """
-    Create an overlay of the original image and the segmentation mask
-    
-    Args:
-        original: Original image as numpy array
-        mask: Segmentation mask as numpy array
-        alpha: Transparency level of the overlay
-        
-    Returns:
-        A numpy array representing the overlay image
-    """
     # Ensure mask is RGB if it's not already
     if len(mask.shape) == 2 or mask.shape[2] == 1:
         mask_rgb = cv2.cvtColor(mask, cv2.COLOR_GRAY2RGB)
